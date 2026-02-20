@@ -10,7 +10,7 @@ public class WaveController : MonoBehaviour
 
     public bool IsComplete()
     {
-        return enemiesSpawned >= currentWave?.enemyCount;
+        return enemiesSpawned >= currentWave.enemyCount;
     }
 
     public void StartWave(Wave wave)

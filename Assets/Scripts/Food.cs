@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
+    public float speed = 10;
     public int attackPoint = 5;
 
     void OnTriggerEnter(Collider other)
@@ -18,5 +19,11 @@ public class Food : MonoBehaviour
         //     health.TakeDamage(attackPoint);
         // }
         // Destroy(gameObject);
+    }
+    void Update()
+    {
+        Vector3 move = new Vector3(1f, 0f, 0f);
+        transform.position += move * speed * Time.deltaTime;
+        
     }
 }
